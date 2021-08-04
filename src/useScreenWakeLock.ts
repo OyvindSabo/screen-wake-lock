@@ -22,7 +22,7 @@ const getWakeLockSentinel = async (debug?: boolean) => {
   }
 };
 
-const useWakeLock = (debug?: boolean) => {
+const useScreenWakeLock = (debug?: boolean) => {
   const [
     wakeLockSentinel,
     setWakeLockSentinel,
@@ -48,4 +48,4 @@ const useWakeLock = (debug?: boolean) => {
   });
 };
 
-export default useWakeLock;
+export default useScreenWakeLock;

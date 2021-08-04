@@ -1,2 +1,2 @@
-export { default } from './WakeLock';
-export { default as useWakeLock } from './useWakeLock';
+export { default } from './ScreenWakeLock';
+export { default as useScreenWakeLock } from './useScreenWakeLock';

@@ -1,4 +1,4 @@
-# woke.js
+# screen-wake-lock.js
 
 React library to prevent device from entering sleep mode when app is in active tab.
 
@@ -6,43 +6,43 @@ React library to prevent device from entering sleep mode when app is in active t
 
 ```bash
 # Install using npm
-npm install woke
+npm install screen-wake-lock
 ```
 
 ```bash
 # Install using yarn
-yarn add woke
+yarn add screen-wake-lock
 ```
 
 ## Usage
 
-### Prevent device from entering sleep app-wide using WakeLock component
+### Prevent device from entering sleep app-wide using ScreenWakeLock component
 
 ```typescript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WakeLock from 'woke';
+import ScreenWakeLock from 'screen-wake-lock';
 import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <WakeLock />
+    <ScreenWakeLock />
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
 ```
 
-### Prevent device from entering sleep mode when a specific component is rendered using WakeLock component
+### Prevent device from entering sleep mode when a specific component is rendered using ScreenWakeLock component
 
 ```typescript
 import React from 'react';
-import WakeLock from 'woke';
+import ScreenWakeLock from 'screen-wake-lock';
 
 const SpecificComponent = () => {
   return (
     <>
-      <WakeLock />
+      <ScreenWakeLock />
       <div>Sleepless in Seattle</div>
     </>
   );
@@ -51,30 +51,30 @@ const SpecificComponent = () => {
 export default SpecificComponent;
 ```
 
-### Prevent device from entering sleep mode when a specific component is rendered using useWakeLock hook
+### Prevent device from entering sleep mode when a specific component is rendered using useScreenWakeLock hook
 
 ```typescript
 import React from 'react';
-import { useWakeLock } from 'woke';
+import { useScreenWakeLock } from 'screen-wake-lock';
 
 const SpecificComponent = () => {
-  useWakeLock();
+  useScreenWakeLock();
   return <div>Sleepless in Seattle</div>;
 };
 
 export default SpecificComponent;
 ```
 
-### Use useWakeLock in debug mode
+### Use useScreenWakeLock in debug mode
 
-`useWakeLock` takes an optional parameter `debug`. When passed `true` it will print the status of the wake lock to the console whenever it gets locked or released. for instance when navigating away from the browser tab where the app is running and back. This can be a convenient way to test that the hook is working.
+`useScreenWakeLock` takes an optional parameter `debug`. When passed `true` it will print the status of the wake lock to the console whenever it gets locked or released. for instance when navigating away from the browser tab where the app is running and back. This can be a convenient way to test that the hook is working.
 
 ```typescript
 import React from 'react';
-import { useWakeLock } from 'woke';
+import { useScreenWakeLock } from 'screen-wake-lock';
 
 const SpecificComponent = () => {
-  useWakeLock(true);
+  useScreenWakeLock(true);
   return <div>Sleepless in Seattle</div>;
 };
 
