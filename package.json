@@ -1,0 +1,62 @@
+{
+  "name": "insomniac",
+  "version": "0.1.0",
+  "description": "React library to prevent computer from entering sleep mode",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OyvindSabo/insomniac.git"
+  },
+  "keywords": [
+    "wakelock",
+    "manager",
+    "component",
+    "wake",
+    "prevent",
+    "sleep",
+    "mode",
+    "awake",
+    "wakelocksentinel",
+    "react",
+    "hook",
+    "insomniac",
+    "dimming",
+    "locking"
+  ],
+  "author": "Øyvind Sæbø",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OyvindSabo/insomniac/issues"
+  },
+  "homepage": "https://github.com/OyvindSabo/insomniac#readme",
+  "devDependencies": {
+    "@types/dom-screen-wake-lock": "^1.0.0",
+    "@types/jest": "^26.0.15",
+    "@types/react-test-renderer": "^17.0.1",
+    "jest": "^26.6.1",
+    "prettier": "^2.1.2",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^26.4.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "react": "^17.0.1"
+  }
+}
