@@ -1,4 +1,4 @@
-# wakelock.js
+# woke.js
 
 React library to prevent device from entering sleep mode when app is in active tab.
 
@@ -6,12 +6,12 @@ React library to prevent device from entering sleep mode when app is in active t
 
 ```bash
 # Install using npm
-npm install wakelock
+npm install woke
 ```
 
 ```bash
 # Install using yarn
-yarn add wakelock
+yarn add woke
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add wakelock
 ```typescript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WakeLock from 'wakelock';
+import WakeLock from 'woke';
 import App from './App';
 
 ReactDOM.render(
@@ -37,7 +37,7 @@ ReactDOM.render(
 
 ```typescript
 import React from 'react';
-import WakeLock from 'insomniac';
+import WakeLock from 'woke';
 
 const SpecificComponent = () => {
   return (
@@ -55,7 +55,7 @@ export default SpecificComponent;
 
 ```typescript
 import React from 'react';
-import { useWakeLock } from 'wakelock';
+import { useWakeLock } from 'woke';
 
 const SpecificComponent = () => {
   useWakeLock();
@@ -71,7 +71,7 @@ export default SpecificComponent;
 
 ```typescript
 import React from 'react';
-import { useWakeLock } from 'insomniac';
+import { useWakeLock } from 'woke';
 
 const SpecificComponent = () => {
   useWakeLock(true);
