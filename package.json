@@ -1,6 +1,6 @@
 {
   "name": "screen-wake-lock",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React library to prevent computer from entering sleep mode",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
