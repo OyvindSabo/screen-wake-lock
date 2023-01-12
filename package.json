@@ -57,6 +57,6 @@
     "lib/**/*"
   ],
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "17 || 18"
   }
 }
